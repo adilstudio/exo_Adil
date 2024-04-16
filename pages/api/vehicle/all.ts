@@ -1,7 +1,7 @@
 // pages/api/vehicle/all.ts
 import { NextApiRequest, NextApiResponse } from 'next';
 import sqlite3 from 'sqlite3';
-import Vehicle from './models/Vehicle'; // On importe le model Vehicle
+import Vehicle from '../../../models/Vehicle';
 
 // Path to the SQLite database
 const dbPath = './db/database.db';
