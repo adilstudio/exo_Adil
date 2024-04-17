@@ -11,16 +11,16 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-4">
             <div className="bg-gray-100 p-4 rounded-md flex-1">
               <h2 className="text-lg font-semibold mb-2">BACKEND:</h2>
-              <p><span className="font-semibold">Route Get /api/info:</span> <a href="api/info" target="_blank"><button className="secondary"></button></a></p>
-              <p><span className="font-semibold">Route Get /api/status:</span> <a href="api/status" target="_blank"><button className="secondary"></button></a></p>
-            <p><span className="font-semibold">Route Post /api/calculate:</span> <a href="api/calculate" target="_blank"><button className="disabled"></button></a></p>
+              <p><span className="font-semibold">Route Get /api/info:</span> <a href="api/info" target="_blank"><button className="secondary">infos route</button></a></p>
+              <p><span className="font-semibold">Route Get /api/status:</span> <a href="api/status" target="_blank"><button className="secondary">status route</button></a></p>
+            <p><span className="font-semibold">Route Vehicule /api/vehicle:</span> <a href="api/vehicule" target="_blank"><button className="disabled">vehicule route</button></a></p>
+            <p><span className="font-semibold">Route Post /api/calculate:</span> <a href="api/calculate" target="_blank"><button className="disabled">calculate route</button></a></p>
             </div>
             <div className="bg-gray-100 p-4 rounded-md flex-1">
             <h2 className="text-lg font-semibold mb-2">FRONTEND: </h2>
-            <p><span className="font-semibold">Infos:</span> <Link href="/infos">package infos</Link> </p>
-            <p><span className="font-semibold">Status:</span><Link href="/status">package status</Link> </p>
-            <p><span className="font-semibold">Listes:</span><Link href="/infos">Tableaux</Link> </p>
-            <p><span className="font-semibold">Vehicles:</span><Link href="/infos">Tableau Vehicle</Link> </p>
+            <p><span className="font-semibold">Infos:</span> <Link href="/get_infos">package infos</Link> </p>
+            <p><span className="font-semibold">Listes:</span><Link href="/listes">Tableaux</Link> </p>
+            <p><span className="font-semibold">Vehicles:</span><Link href="/vehicles">Tableau Vehicle</Link> </p>
             </div>
           </div>
       </div>
