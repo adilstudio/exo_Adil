@@ -13,7 +13,7 @@ export default function Home() {
               <h2 className="text-lg font-semibold mb-2">BACKEND:</h2>
               <p><span className="font-semibold">Route Get /api/info:</span> <a href="api/info" target="_blank"><button className="secondary">infos route</button></a></p>
               <p><span className="font-semibold">Route Get /api/status:</span> <a href="api/status" target="_blank"><button className="secondary">status route</button></a></p>
-            <p><span className="font-semibold">Route Vehicule /api/vehicle:</span> <a href="api/vehicule" target="_blank"><button className="disabled">vehicule route</button></a></p>
+            <p><span className="font-semibold">Route Vehicule /api/vehicle:</span> <a href="api/vehicle/all" target="_blank"><button className="disabled">vehicule route</button></a></p>
             <p><span className="font-semibold">Route Post /api/calculate:</span> <a href="api/calculate" target="_blank"><button className="disabled">calculate route</button></a></p>
             </div>
             <div className="bg-gray-100 p-4 rounded-md flex-1">

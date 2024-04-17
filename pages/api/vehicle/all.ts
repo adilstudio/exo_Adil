@@ -2,9 +2,11 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import sqlite3 from 'sqlite3';
 import Vehicle from '../../../models/Vehicle';
+import path from 'path';
 
 // Path to the SQLite database
-const dbPath = './db/database.db';
+//const dbPath = './db/database.db';
+const dbPath = path.join(process.cwd(), 'db', 'database.db');
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
   try {
@@ -22,7 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       db.close();
 
       // Format the retrieved data into Vehicle objects
-      const vehicles: Vehicle[] = rows.map((row: any) => {
+      const vehicles: Vehicle[] = rows.map((row: any, index: number) => {
         return {
           id: row.id,
           bicycle: row.bicycle,
@@ -33,7 +35,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
           type: row.type,
           vehicle: row.vehicle,
           vin: row.vin,
-          vrm: row.vrm
+          vrm: row.vrm,
+          key: index.toString()
         };
       });
 

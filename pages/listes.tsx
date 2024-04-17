@@ -70,12 +70,14 @@ const App = () => {
       <div className="md:hidden lg:hidden xl:hidden 2xl:hidden">
         <div className="container mx-auto px-4">
           Tableau 1
-          {liste1.map((liste) => (
-            <GenericTableSm title = "Tableau 1" data = { liste } />))}
+          {liste1.map((liste, index) => (
+            <GenericTableSm key={`table1-${index}`} title="Tableau 1" data={liste} />
+          ))}
           <br></br>
           Tableau 2
-          {liste2.map((liste) => (
-            <GenericTableSm title="Tableau 2" data={liste} />))}
+          {liste2.map((liste, index) => (
+            <GenericTableSm key={`table2-${index}`} title="Tableau 2" data={liste} />
+          ))}
         </div>
       </div>
     </>

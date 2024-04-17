@@ -37,8 +37,8 @@ const Vehicles = () => {
       <div className="md:hidden lg:hidden xl:hidden 2xl:hidden">
         <div className="container mx-auto px-4">
           Vehicules
-          {vehicles.map((vehicle) => (
-            <GenericTableSm title="Tableau 1" data={vehicle} />))}
+          {vehicles.map((vehicle, index) => (
+            <GenericTableSm key={index} title="Tableau 1" data={vehicle} />))}
         </div>
       </div>
 +

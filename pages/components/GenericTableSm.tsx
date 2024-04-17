@@ -4,6 +4,11 @@ interface GenericTableSmProps {
 }
 
 const GenericTableSm: React.FC<GenericTableSmProps> = ({ title, data }) => {
+
+  if (!data) {
+    return <div>No data available yet !</div>;
+  }
+
   return (
     <div className="overflow-x-auto">
       <table className="min-w-full divide-y divide-gray-200">

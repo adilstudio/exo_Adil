@@ -9,6 +9,13 @@ interface GenericTableProps {
 const GenericTable: React.FC<GenericTableProps> = ({ title, data, itemsPerPage = 10 }) => {
   const [currentPage, setCurrentPage] = useState(1);
 
+  if (!data) {
+    return <div>No data available yet !</div>;
+  }
+  else if (data.length === 0) {
+    return <div>No data available yet !</div>;
+  }
+  
   const totalPages = Math.ceil(data.length / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   const endIndex = Math.min(startIndex + itemsPerPage, data.length);
@@ -21,10 +28,6 @@ const GenericTable: React.FC<GenericTableProps> = ({ title, data, itemsPerPage =
   const handleNextPage = () => {
     setCurrentPage((prevPage) => Math.min(prevPage + 1, totalPages));
   };
-
-  if (!data || data.length === 0) {
-    return <div>No data available yet !</div>;
-  }
 
   return (
     <div className="overflow-x-auto">
